@@ -1,23 +1,24 @@
 //&#10004; tick
 //&#10007; cross
+/*global alert */
+/*global console */
+
 var newtask = document.getElementById("newtask");
 
-//var task = function (task){
-//    this.done = "<hr><div class='doneButton'>&#10004 |</div>";
-//    this.task =
-//
-//}
 function divFunction() {
-    alert("hell");
+    'use strict';
+    console.log('lal');
 }
 
 function slave(e) {
-    if (e.keyCode == 13) {
+    'use strict';
+    if (e.keyCode === 13) {
 
-        var inpt = document.getElementById("npt").value;
+        var inpt = document.getElementById("npt").value,
+            last;
 
         document.body.innerHTML += "<div></div>";
-        var last = document.body.lastChild;
+        last = document.body.lastChild;
         last.innerHTML += "<hr>";
 
         last.innerHTML += "<div class='doneButton' onclick='taskDone(event)'>|&#10004|</div>";
@@ -31,7 +32,8 @@ function slave(e) {
 }
 
 function taskDone(e) {
-    if (e.target.style.color == "red") {
+    'use strict';
+    if (e.target.style.color === "red") {
         e.target.style.color = "black";
     } else {
         e.target.style.color = "red";
@@ -39,6 +41,7 @@ function taskDone(e) {
 }
 
 function taskDel(t) {
+    'use strict';
     t.parentNode.parentNode.removeChild(t.parentNode);
 
 }
