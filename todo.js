@@ -43,5 +43,5 @@ function taskDone(e) {
 function taskDel(t) {
     'use strict';
     t.parentNode.parentNode.removeChild(t.parentNode);
-
 }
+alert("j");
