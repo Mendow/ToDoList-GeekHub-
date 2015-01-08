@@ -40,5 +40,5 @@ function taskDone(e) {
 
 function taskDel(t) {
     t.parentNode.parentNode.removeChild(t.parentNode);
-
 }
+alert("j");
