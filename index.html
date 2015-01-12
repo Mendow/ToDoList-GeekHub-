@@ -1,10 +1,17 @@
-
 <!DOCTYPE html>
 <!--
 Task:
-    Add todo
-    Mark as done
-    Remove todo
+,    1. добавление элемента
+,    2. возможность пометить элемент как выполненный
+,    3. возможность пометить все сразу
+,    4. вывод количества выполненных и всех
+,    5. удаление
+    6. фильтр просмотра всех/только выполненые/только не выполненые
+,    7. редактирование
+,    8. удаление выполненых
+    9. изменение порядка
+    10 изменение порядка перетаскиванием
+    11. Сохранение в базе данных
 -->
 <html>
 
@@ -14,12 +21,23 @@ Task:
 </head>
 
 <body>
-    Input here:
+   <!-- Input here:
     <input id="npt" type="text" onkeypress="return slave(event)" />
+    -->
 
 
 
+    <h1>To-Do List</h1>
+    <div>Total task <div id="taskTotal">0</div></div>
+    <div>Done task <div id="taskDone">0</div></div>
+    <input type="text" id="txt1">
+    <input type="button" value="Add List" onclick="addList('ToDoListTable')">
+    <input type="button" value="Delete marked" onclick="deleteMarked('ToDoListTable')">
+    <input type="button" value="Mark all" onclick="markAll('ToDoListTable')">
+    <input type="button" value="Show all done" onclick="showAllDone('ToDoListTable')">
 
+    <table id="ToDoListTable"  border="1">
+    </table>
     <script src="todo.js"></script>
 </body>
 
